@@ -1,0 +1,99 @@
+html {
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 100%); /* Beyaz arka plan */
+  font-family: 'Figtree', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.background-yellow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 85vw; 
+  height: 80vh; 
+  background-color: hsl(47, 88%, 63%);
+  border-radius: 12px; /* Kartın yuvarlak kenarlarına uyum sağlar */
+  transform: translate(-50%, -50%); /* Tam ortalamak için */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 325px; /* Kartı hafifçe daralttım */
+  width: 85%; /* Daha kompakt bir görünüm için */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  position: relative;
+border-style: solid;
+  border-color: hsl(0, 0%, 0%);
+  border-width: 1px 6px 6px 1px; 
+  z-index: 1; /* Kartın sarı alanın üstünde görünmesi için */
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card-content .topic {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 7%); 
+  background-color: hsl(47, 88%, 63%); 
+  padding: 4px 8px; 
+  border-radius: 5px;
+  display: inline-block; 
+}
+
+
+.card-content .date {
+  font-size: 0.75rem;
+  color: hsl(0, 0%, 42%);
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.card-content h2 {
+  font-size: 1.25rem;
+  color: hsl(0, 0%, 7%);
+  font-weight: 800;
+}
+
+.card-content .description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: hsl(0, 0%, 42%);
+  margin: 0.5rem 0;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.author span {
+  font-size: 0.875rem;
+  color: hsl(0, 0%, 0%);
+  font-weight: 500;
+}
