@@ -1,0 +1,195 @@
+/* Genel Stil Ayarları */
+@font-face {
+    font-family: 'Young Serif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--stone-100);
+    color: var(--stone-900);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.recipe-image {
+    width: 100%;
+    border-radius: 8px;
+}
+h1 {
+    color: black; /* Başlığı siyah yap */
+    font-family: 'Young Serif', serif;
+    font-size: 28px;
+}
+
+
+h2 {
+    font-family: 'Young Serif', serif;
+    color: var(--brown-800);
+}
+
+.description {
+    font-size: 16px;
+    color: var(--stone-600);
+}
+
+.section {
+    margin-top: 20px;
+}
+
+/* Preparation Time Bölümü */
+.prep-time-container {
+    background-color: var(--rose-50); /* Açık pembe arka plan */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.prep-time-container h2 {
+    color: var(--rose-800); /* Daha koyu morumsu renk */
+    font-family: 'Young Serif', serif;
+    font-size: 22px;
+}
+
+.prep-time {
+    list-style: none;
+    padding: 0;
+}
+
+.prep-time li {
+    font-size: 16px;
+    color: var(--stone-600);
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px; /* Nokta için boşluk */
+}
+
+.prep-time li::before {
+    content: "•";
+    color: var(--rose-800); /* Başlık renginde noktalar */
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+
+.ingredients {
+    list-style: none;
+    padding-left: 0;
+}
+
+.ingredients li {
+    font-size: 16px;
+    line-height: 1.8; /* Satır aralığı artırıldı */
+    color: var(--stone-900);
+    position: relative;
+    padding-left: 20px; /* Nokta için boşluk bıraktım */
+}
+
+.ingredients li::before {
+    content: "•";
+    color: var(--brown-800); /* Başlık renginde noktalar */
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+
+
+.instructions {
+    list-style: decimal; /* Sayılar 1, 2, 3 şeklinde olacak */
+    padding-left: 20px;
+}
+
+.instructions li {
+    font-size: 16px;
+    line-height: 1.8; /* Daha fazla satır aralığı */
+    color: var(--stone-900);
+}
+
+.instructions li::marker {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--brown-800); /* Başlık renginde */
+}
+
+
+.nutrition-info {
+    font-size: 14px;
+    color: var(--stone-600);
+    margin-bottom: 10px;
+}
+
+.nutrition-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start; /* İçeriği sola hizala */
+}
+
+.nutrition-row {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start; /* Elemanları sola hizala */
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--brown-800);
+}
+
+.label {
+    width: 50%;
+    text-align: left;
+    color: var(--stone-600); 
+    font-weight: normal;
+}
+
+.value {
+    width: 50%;
+    text-align: left;
+    color: var(--brown-800); /* Başlıktan farklı ama daha belirgin */
+}
+
+.nutrition-row:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--stone-600);
+    width: 100%;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 375px) {
+    .container {
+        padding: 15px;
+    }
+}
