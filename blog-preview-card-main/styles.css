@@ -17,16 +17,14 @@ body {
 
 .background-yellow {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 85vw; 
-  height: 80vh; 
+  top: 0;
+  left: 0;
+  width: 100vw; /* Tüm ekran genişliği */
+  height: 100vh; /* Tüm ekran yüksekliği */
   background-color: hsl(47, 88%, 63%);
-  border-radius: 12px; /* Kartın yuvarlak kenarlarına uyum sağlar */
-  transform: translate(-50%, -50%); /* Tam ortalamak için */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   z-index: -1;
 }
+
 
 .card {
   background-color: hsl(0, 0%, 100%);
