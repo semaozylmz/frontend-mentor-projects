@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: hsl(225, 100%, 94%); /* Pale Blue */
+    background-image: url('images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+}
+.description{
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 30px; /* Sol tarafa 30px boşluk ekledik */
+    padding-right: 30px;
+    line-height: 1.5; 
+}
+
+.container {
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.illustration img {
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(225, 100%, 98%);
+    padding: 20px;
+    margin: 20px 30px;
+    border-radius: 8px;
+}
+.plan img {
+    width: 50px; /* Görsel boyutunu ayarla */
+    height: auto;
+    margin-right: 15px; /* Sağında boşluk bırak */
+}
+
+.plan-info {
+    display: flex;
+    flex-direction: column; /* Yalnızca name ve price alt alta olacak */
+    align-items: flex-start; /* Default olarak sola hizalıydı */
+    margin-left: 15px;
+}
+
+.plan-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 18px;
+    color: hsl(224, 23%, 55%);
+    padding-top: 8px;
+}
+
+.change-plan {
+    margin-left: auto; /* Sağ tarafa ittir */
+    color: hsl(245, 75%, 52%);
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.payment-btn {
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    
+    padding: 15px 85px;
+    margin: 20px 0;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cancel-order {
+    display: block;
+    color: hsl(224, 23%, 55%);
+    margin-top: 12px;
+    font-size: 14px;
+    text-decoration: none;
+}
