@@ -1,0 +1,126 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2eae2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* daha şık görünüm için */
+}
+.card-img {
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.card-content {
+  padding: 24px;
+}
+
+.category {
+  letter-spacing: 4px;
+  font-size: 12px;
+  color: #6c7289;
+  margin-bottom: 12px;
+}
+
+.product-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1c232b;
+}
+
+.description {
+  font-size: 14px;
+  color: #6c7289;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.new-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3d8168;
+}
+
+.old-price {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #6c7289;
+}
+
+.add-to-cart {
+  background-color: #3d8168;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #1a4032;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    max-width: 700px;
+  }
+
+  .card-img {
+    width: 50%;
+    height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+  }
+
+  .card-img img {
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-content {
+    width: 50%;
+    padding: 40px;
+  }
+}
